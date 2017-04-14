@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170414 14:47:13.118" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite source="/Users/Ozan/Desktop/amazon-tests/web/amazonweb.robot" id="s1" name="Amazonweb">
+<test id="s1-t1" name="Test Search">
+<kw name="Login" library="amazonresources">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<arg>moment-webtest</arg>
+</arguments>
+<msg timestamp="20170414 14:47:13.355" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com/'</msg>
+<status status="PASS" endtime="20170414 14:47:18.680" starttime="20170414 14:47:13.354"></status>
+</kw>
+<kw name="Home Page Should Be Open" library="amazonresources">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</arg>
+</arguments>
+<msg timestamp="20170414 14:47:18.731" level="INFO">Page title is 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more'.</msg>
+<status status="PASS" endtime="20170414 14:47:18.732" starttime="20170414 14:47:18.681"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Opened Homepage'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:18.733" starttime="20170414 14:47:18.732"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:18.733" starttime="20170414 14:47:18.680"></status>
+</kw>
+<kw name="Click Sign In" library="amazonresources">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:20.735" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:20.735" starttime="20170414 14:47:18.734"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${signInButton}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:20.736" level="INFO">Clicking element 'xpath=//a[contains(@id, "nav-link-accountList")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:22.764" starttime="20170414 14:47:20.735"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Clicked Sign In Button'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:22.765" starttime="20170414 14:47:22.764"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:22.765" starttime="20170414 14:47:18.733"></status>
+</kw>
+<kw name="Input Username" library="amazonresources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${emailField}</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:22.925" starttime="20170414 14:47:22.766"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:24.925" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:24.926" starttime="20170414 14:47:22.925"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=email</arg>
+<arg>${userEmail}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:24.927" level="INFO">Typing text 'test.auto.amazon@gmail.com' into text field 'name=email'</msg>
+<status status="PASS" endtime="20170414 14:47:25.306" starttime="20170414 14:47:24.926"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Entered UserName'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:25.307" starttime="20170414 14:47:25.306"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:25.307" starttime="20170414 14:47:22.765"></status>
+</kw>
+<kw name="Input Password" library="amazonresources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${passwordField}</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:25.341" starttime="20170414 14:47:25.308"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:27.343" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:27.343" starttime="20170414 14:47:25.342"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${userPassword}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:27.344" level="INFO">Typing text 'amazon123' into text field 'name=password'</msg>
+<status status="PASS" endtime="20170414 14:47:27.544" starttime="20170414 14:47:27.343"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Entered Password'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:27.545" starttime="20170414 14:47:27.545"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:27.545" starttime="20170414 14:47:25.307"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<msg timestamp="20170414 14:47:27.546" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" endtime="20170414 14:47:31.391" starttime="20170414 14:47:27.546"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Login Successfully'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:31.392" starttime="20170414 14:47:31.391"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:31.392" starttime="20170414 14:47:13.354"></status>
+</kw>
+<kw name="Search" library="amazonresources">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${searchField}</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:31.445" starttime="20170414 14:47:31.393"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:33.446" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:33.446" starttime="20170414 14:47:31.445"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>${searchText}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:33.447" level="INFO">Typing text 'samsung' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20170414 14:47:33.689" starttime="20170414 14:47:33.446"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Entered Search'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:33.690" starttime="20170414 14:47:33.689"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<msg timestamp="20170414 14:47:33.690" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" endtime="20170414 14:47:35.821" starttime="20170414 14:47:33.690"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Search Successfully'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:35.822" starttime="20170414 14:47:35.822"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Showing most relevant results. See all results for samsung.</arg>
+</arguments>
+<msg timestamp="20170414 14:47:38.021" level="INFO">Current page contains text 'Showing most relevant results. See all results for samsung.'.</msg>
+<status status="PASS" endtime="20170414 14:47:38.022" starttime="20170414 14:47:35.822"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Controlled Text'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:38.022" starttime="20170414 14:47:38.022"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:38.023" starttime="20170414 14:47:31.393"></status>
+</kw>
+<kw name="Results Second Page" library="amazonresources">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:40.024" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:40.024" starttime="20170414 14:47:38.023"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${secondPageButton}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:40.025" level="INFO">Clicking element 'xpath=//span[contains(@class, "pagnLink")][1]'.</msg>
+<status status="PASS" endtime="20170414 14:47:40.379" starttime="20170414 14:47:40.024"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Second Page Opened'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:40.380" starttime="20170414 14:47:40.380"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${secondPageControl}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:40.444" level="INFO">Current page contains element 'xpath=//span[contains(@class, "pagnCur")][1]'.</msg>
+<status status="PASS" endtime="20170414 14:47:40.444" starttime="20170414 14:47:40.380"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Controlled Page'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:40.445" starttime="20170414 14:47:40.444"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:40.445" starttime="20170414 14:47:38.023"></status>
+</kw>
+<kw name="Wish List Test" library="amazonresources">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${chooseThirdProduct}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:40.447" level="INFO">Clicking element 'xpath=//li[contains(@id, "result_26")]//div[contains(@class, "a-fixed-left-grid-col a-col-left")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:44.979" starttime="20170414 14:47:40.446"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Selected Third Product'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:44.980" starttime="20170414 14:47:44.980"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:47.981" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:47.981" starttime="20170414 14:47:44.980"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${addToWish}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:47.982" level="INFO">Clicking element 'xpath=//input[contains(@name, "submit.add-to-registry.wishlist")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:48.383" starttime="20170414 14:47:47.982"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Added To Wish List'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:48.383" starttime="20170414 14:47:48.383"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:51.387" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:51.387" starttime="20170414 14:47:48.384"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${viewYourList}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:51.388" level="INFO">Clicking element 'xpath=//a[contains(@class, "w-button")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:52.452" starttime="20170414 14:47:51.387"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:55.453" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:55.453" starttime="20170414 14:47:52.452"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class, "a-text-center a-fixed-left-grid-col g-itemImage g-item-sortable-padding a-col-right")]</arg>
+</arguments>
+<msg timestamp="20170414 14:47:55.491" level="INFO">Current page contains element 'xpath=//div[contains(@class, "a-text-center a-fixed-left-grid-col g-itemImage g-item-sortable-padding a-col-right")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:55.491" starttime="20170414 14:47:55.454"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Controlled To Added To Wish List'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:55.492" starttime="20170414 14:47:55.492"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:57.495" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:57.495" starttime="20170414 14:47:55.492"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${deleteButton}</arg>
+</arguments>
+<msg timestamp="20170414 14:47:57.496" level="INFO">Clicking element 'xpath=//input[contains(@name, "submit.deleteItem")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:57.671" starttime="20170414 14:47:57.495"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Deleted From Wish List'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:57.672" starttime="20170414 14:47:57.671"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170414 14:47:59.673" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170414 14:47:59.674" starttime="20170414 14:47:57.672"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is not found on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class, "a-text-center a-fixed-left-grid-col g-itemImage g-item-sortable-padding a-col-right")]</arg>
+</arguments>
+<msg timestamp="20170414 14:47:59.689" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, "a-text-center a-fixed-left-grid-col g-itemImage g-item-sortable-padding a-col-right")]'.</msg>
+<status status="PASS" endtime="20170414 14:47:59.689" starttime="20170414 14:47:59.674"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>'Controlled To Deleted From Wish List'</arg>
+</arguments>
+<status status="PASS" endtime="20170414 14:47:59.690" starttime="20170414 14:47:59.689"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:59.690" starttime="20170414 14:47:40.446"></status>
+</kw>
+<status status="PASS" endtime="20170414 14:47:59.691" critical="yes" starttime="20170414 14:47:13.351"></status>
+</test>
+<status status="PASS" endtime="20170414 14:47:59.692" starttime="20170414 14:47:13.121"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Amazonweb" pass="1">Amazonweb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
