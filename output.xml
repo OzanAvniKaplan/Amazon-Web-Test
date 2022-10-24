@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.8 on darwin)" generated="20221022 23:21:12.608" rpa="false" schemaversion="3">
+<suite id="s1" name="Algoranddevportal" source="/Users/sevgikaplan/Desktop/algorand-dev-portal/algoranddevportal.robot">
+<test id="s1-t1" name="Test Signin User" line="21">
+<kw name="Open Homepage" library="algorandDevPortal_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HomePage}</arg>
+<arg>${Browser}</arg>
+<arg>algorandDevPortal-webtest</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221022 23:21:12.684" level="INFO">Opening browser 'Chrome' to base url 'https://staging.new-dev-site.algorand.org/'.</msg>
+<status status="PASS" starttime="20221022 23:21:12.684" endtime="20221022 23:21:14.535"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221022 23:21:14.535" endtime="20221022 23:21:14.655"/>
+</kw>
+<kw name="Authentication Box" library="algorandDevPortal_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${authenticationURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221022 23:21:14.656" level="INFO">Opening url 'https://algorand:staging@staging.new-dev-site.algorand.org/'</msg>
+<status status="PASS" starttime="20221022 23:21:14.656" endtime="20221022 23:21:19.116"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:14.655" endtime="20221022 23:21:19.116"/>
+</kw>
+<kw name="Check Login Page" library="algorandDevPortal_resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${homepage.pageHeader}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221022 23:21:19.116" endtime="20221022 23:21:19.129"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${homepage.headerMenu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:19.137" level="INFO">Current page contains element 'id=header-menu'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.129" endtime="20221022 23:21:19.137"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${signIn.button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:19.147" level="INFO">Current page contains element 'xpath=//a[contains(@class, "button--tertiary typography--small-title page-header__signin-button")]'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.137" endtime="20221022 23:21:19.147"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${signUpButton}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:19.154" level="INFO">Current page contains element 'xpath=//a[contains(@class, "button--primary typography--small-title page-header__signup-button")]'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.147" endtime="20221022 23:21:19.154"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${homepage.themeButton}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:19.160" level="INFO">Current page contains element 'id=theme-button'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.154" endtime="20221022 23:21:19.160"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:19.116" endtime="20221022 23:21:19.160"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:12.684" endtime="20221022 23:21:19.160"/>
+</kw>
+<kw name="Signin With Staff User" library="algorandDevPortal_resources">
+<kw name="Click SignIn Button" library="algorandDevPortal_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signIn.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 23:21:19.160" level="INFO">Clicking element 'xpath=//a[contains(@class, "button--tertiary typography--small-title page-header__signin-button")]'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.160" endtime="20221022 23:21:19.685"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${signIn.signInForm}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221022 23:21:19.685" endtime="20221022 23:21:19.692"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:19.160" endtime="20221022 23:21:19.692"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${signIn.emailAdressField}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221022 23:21:19.692" endtime="20221022 23:21:19.697"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${signIn.emailAdressField}</arg>
+<arg>${signIn.activeUserEmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221022 23:21:19.697" level="INFO">Typing text 'hipsevtest@gmail.com' into text field 'id=id_login'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.697" endtime="20221022 23:21:19.759"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${signIn.passwordField}</arg>
+<arg>${signIn.activeUserPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221022 23:21:19.759" level="INFO">Typing text 'hipohipo123' into text field 'id=form-password-input'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.759" endtime="20221022 23:21:19.792"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signIn.signInForm.signInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 23:21:19.793" level="INFO">Clicking element 'xpath=//button[contains(@type, "submit")]'.</msg>
+<status status="PASS" starttime="20221022 23:21:19.792" endtime="20221022 23:21:21.051"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:19.160" endtime="20221022 23:21:21.051"/>
+</kw>
+<kw name="Check SignIn User" library="algorandDevPortal_resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${homepage.pageHeader}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221022 23:21:21.051" endtime="20221022 23:21:21.055"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${homepage.headerMenu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:21.060" level="INFO">Current page contains element 'id=header-menu'.</msg>
+<status status="PASS" starttime="20221022 23:21:21.055" endtime="20221022 23:21:21.060"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${signIn.userProfile.button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:21.066" level="INFO">Current page contains element 'id=user-section-button'.</msg>
+<status status="PASS" starttime="20221022 23:21:21.060" endtime="20221022 23:21:21.066"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${homepage.themeButton}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:21.071" level="INFO">Current page contains element 'id=theme-button'.</msg>
+<status status="PASS" starttime="20221022 23:21:21.066" endtime="20221022 23:21:21.071"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${homepage.notificationButton}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221022 23:21:21.078" level="INFO">Current page contains element 'xpath=//button[contains(@class, "notification-section__button")]'.</msg>
+<status status="PASS" starttime="20221022 23:21:21.071" endtime="20221022 23:21:21.078"/>
+</kw>
+<kw name="Click Profile" library="algorandDevPortal_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signIn.userProfile.button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 23:21:21.079" level="INFO">Clicking element 'id=user-section-button'.</msg>
+<status status="PASS" starttime="20221022 23:21:21.079" endtime="20221022 23:21:21.100"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:21.078" endtime="20221022 23:21:21.100"/>
+</kw>
+<kw name="Get Username" library="algorandDevPortal_resources">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${profile.username}</var>
+<arg>${signIn.userProfile.username}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221022 23:21:21.117" level="INFO">${profile.username} = Automation User</msg>
+<status status="PASS" starttime="20221022 23:21:21.100" endtime="20221022 23:21:21.117"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${profile.username}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221022 23:21:21.117" endtime="20221022 23:21:21.117"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:21.100" endtime="20221022 23:21:21.117"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:21.051" endtime="20221022 23:21:21.117"/>
+</kw>
+<status status="PASS" starttime="20221022 23:21:12.683" endtime="20221022 23:21:21.118"/>
+</test>
+<status status="PASS" starttime="20221022 23:21:12.609" endtime="20221022 23:21:21.118"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Algoranddevportal">Algoranddevportal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
